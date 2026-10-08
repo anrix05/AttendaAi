@@ -1,0 +1,8 @@
+names:
+- A
+- P
+- VIT-Attendance-TSR
+- signature
+nc: 4
+train: C:\Users\User\Desktop\AttendanceSystem\attendance_platform\VIT-Attendance-TSR-1\train\images
+val: C:\Users\User\Desktop\AttendanceSystem\attendance_platform\VIT-Attendance-TSR-1\valid\images

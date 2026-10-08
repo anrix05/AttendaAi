@@ -1,0 +1,79 @@
+# =====================================================================
+# AttendAI — Git Ignore Rules
+# =====================================================================
+
+# 1. Virtual Environments
+venv/
+env/
+.venv/
+ENV/
+env.bak/
+venv.bak/
+
+# 2. Environment Variables & Secrets (CRITICAL - NEVER COMMIT SECRETS)
+.env
+*.env
+!.env.example
+*.pem
+*.key
+*.cert
+
+# 3. Local Database & Runtime State
+data/app.db*
+data/cache/
+data/subjects/
+data/training/
+uploads/
+results/
+*.db
+*.sqlite
+*.sqlite3
+
+# 4. Large Model Weights & Training Artifacts
+runs/
+weights/
+*.pt
+*.pth
+*.onnx
+*.bin
+*.weights
+yolov8n.pt
+VIT-Attendance-TSR-1/
+datasets/
+
+# 5. Temporary & Cache Files
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+htmlcov/
+.tmp_chrome_*/
+.tmp_chrome*
+ui_audit/
+debug_*.png
+debug_*.*
+
+# 6. Local Scratch Scripts
+scratch_*.py
+trace_scan.py
+take_screenshots.py
+take_table_screenshot.py
+capture_screens.py
+verify_p0_real_upload.py
+
+# 7. Spreadsheets & Backups (keep test fixtures)
+*.xlsx
+*.xls
+*.bak
+*.bak.xlsx
+!backend/tests/fixtures/*.xlsx
+
+# 8. Operating System & Editor Files
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.swp
+*.swo

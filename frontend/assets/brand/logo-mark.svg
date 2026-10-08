@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" fill="none">
+  <defs>
+    <mask id="register-cell-cutout" maskUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="64" height="64" fill="#FFFFFF" />
+      <path d="M20 34 L30 46 C34 32 44 18 60 8"
+            stroke="#000000" stroke-width="11"
+            stroke-linecap="round" stroke-linejoin="round" fill="none" />
+    </mask>
+  </defs>
+  <!-- Register Cell Outline (knocked out by tick) -->
+  <rect x="6" y="10" width="48" height="48" rx="12"
+        stroke="#2F3FD0" stroke-width="4" fill="none"
+        mask="url(#register-cell-cutout)" />
+  <!-- Two Ruled Ledger Lines Inside -->
+  <line x1="16" y1="22" x2="32" y2="22"
+        stroke="#2F3FD0" stroke-opacity="0.28" stroke-width="3" stroke-linecap="round" />
+  <line x1="16" y1="30" x2="25" y2="30"
+        stroke="#2F3FD0" stroke-opacity="0.28" stroke-width="3" stroke-linecap="round" />
+  <!-- Confident Signature Tick Breaking Out -->
+  <path d="M20 34 L30 46 C34 32 44 18 60 8"
+        stroke="#2F3FD0" stroke-width="5.5"
+        stroke-linecap="round" stroke-linejoin="round" fill="none" />
+</svg>

@@ -1,0 +1,1776 @@
+{
+  "header": {
+    "class_name": "T.Y.B.TECH",
+    "subject": "SS",
+    "faculty": "SHP",
+    "division": "B",
+    "type": "Practical",
+    "academic_year": "2026-27 (Odd)",
+    "week_no": null
+  },
+  "date_slots": [
+    {
+      "slot": 1,
+      "raw": "",
+      "iso": null,
+      "confidence": 0.0
+    },
+    {
+      "slot": 2,
+      "raw": "",
+      "iso": null,
+      "confidence": 0.0
+    },
+    {
+      "slot": 3,
+      "raw": "",
+      "iso": null,
+      "confidence": 0.0
+    },
+    {
+      "slot": 4,
+      "raw": "",
+      "iso": null,
+      "confidence": 0.0
+    },
+    {
+      "slot": 5,
+      "raw": "",
+      "iso": null,
+      "confidence": 0.0
+    }
+  ],
+  "rows": [
+    {
+      "roll_no": "24108B0037",
+      "name": "PRANAV RAYPELLI",
+      "batch": 3,
+      "sr_no": 1,
+      "cells": [
+        {
+          "slot": 1,
+          "token": "AB",
+          "confidence": 0.98,
+          "ink": "red",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 2,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 3,
+          "token": "AB",
+          "confidence": 0.98,
+          "ink": "pink",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 4,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 5,
+          "token": "BLANK",
+          "confidence": 1.0,
+          "ink": "",
+          "circled": false,
+          "text": ""
+        }
+      ]
+    },
+    {
+      "roll_no": "24108B0038",
+      "name": "ANMOL KADAM",
+      "batch": 3,
+      "sr_no": 2,
+      "cells": [
+        {
+          "slot": 1,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 2,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 3,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 4,
+          "token": "BLANK",
+          "confidence": 1.0,
+          "ink": "",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 5,
+          "token": "BLANK",
+          "confidence": 1.0,
+          "ink": "",
+          "circled": false,
+          "text": ""
+        }
+      ]
+    },
+    {
+      "roll_no": "24108B0039",
+      "name": "KRUTADNYA BODAKE",
+      "batch": 3,
+      "sr_no": 3,
+      "cells": [
+        {
+          "slot": 1,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 2,
+          "token": "AB",
+          "confidence": 0.98,
+          "ink": "pink",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 3,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 4,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 5,
+          "token": "BLANK",
+          "confidence": 1.0,
+          "ink": "",
+          "circled": false,
+          "text": ""
+        }
+      ]
+    },
+    {
+      "roll_no": "24108B0040",
+      "name": "ANUSHKA SHINDE",
+      "batch": 3,
+      "sr_no": 4,
+      "cells": [
+        {
+          "slot": 1,
+          "token": "AB",
+          "confidence": 0.98,
+          "ink": "pink",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 2,
+          "token": "AB",
+          "confidence": 0.98,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 3,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 4,
+          "token": "BLANK",
+          "confidence": 1.0,
+          "ink": "",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 5,
+          "token": "BLANK",
+          "confidence": 1.0,
+          "ink": "",
+          "circled": false,
+          "text": ""
+        }
+      ]
+    },
+    {
+      "roll_no": "24108B0041",
+      "name": "SHUBHAM SHARMA",
+      "batch": 3,
+      "sr_no": 5,
+      "cells": [
+        {
+          "slot": 1,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "black",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 2,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 3,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "black",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 4,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 5,
+          "token": "BLANK",
+          "confidence": 1.0,
+          "ink": "",
+          "circled": false,
+          "text": ""
+        }
+      ]
+    },
+    {
+      "roll_no": "24108B0042",
+      "name": "RITESH YADAV",
+      "batch": 3,
+      "sr_no": 6,
+      "cells": [
+        {
+          "slot": 1,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 2,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 3,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 4,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 5,
+          "token": "BLANK",
+          "confidence": 1.0,
+          "ink": "",
+          "circled": false,
+          "text": ""
+        }
+      ]
+    },
+    {
+      "roll_no": "24108B0043",
+      "name": "ADITYA PARMALE",
+      "batch": 3,
+      "sr_no": 7,
+      "cells": [
+        {
+          "slot": 1,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 2,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 3,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 4,
+          "token": "BLANK",
+          "confidence": 1.0,
+          "ink": "",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 5,
+          "token": "BLANK",
+          "confidence": 1.0,
+          "ink": "",
+          "circled": false,
+          "text": ""
+        }
+      ]
+    },
+    {
+      "roll_no": "24108B0044",
+      "name": "AARYAN YADAV",
+      "batch": 3,
+      "sr_no": 8,
+      "cells": [
+        {
+          "slot": 1,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 2,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 3,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 4,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 5,
+          "token": "BLANK",
+          "confidence": 1.0,
+          "ink": "",
+          "circled": false,
+          "text": ""
+        }
+      ]
+    },
+    {
+      "roll_no": "24108B0045",
+      "name": "HARSHAD PANCHAL",
+      "batch": 3,
+      "sr_no": 9,
+      "cells": [
+        {
+          "slot": 1,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 2,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 3,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 4,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 5,
+          "token": "BLANK",
+          "confidence": 1.0,
+          "ink": "",
+          "circled": false,
+          "text": ""
+        }
+      ]
+    },
+    {
+      "roll_no": "24108B0046",
+      "name": "VIRAJ MAHALE",
+      "batch": 3,
+      "sr_no": 10,
+      "cells": [
+        {
+          "slot": 1,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 2,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 3,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 4,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 5,
+          "token": "BLANK",
+          "confidence": 1.0,
+          "ink": "",
+          "circled": false,
+          "text": ""
+        }
+      ]
+    },
+    {
+      "roll_no": "24108B0048",
+      "name": "DIPANKAR PIMPLE",
+      "batch": 3,
+      "sr_no": 11,
+      "cells": [
+        {
+          "slot": 1,
+          "token": "AB",
+          "confidence": 0.98,
+          "ink": "pink",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 2,
+          "token": "AB",
+          "confidence": 0.98,
+          "ink": "pink",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 3,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 4,
+          "token": "BLANK",
+          "confidence": 1.0,
+          "ink": "",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 5,
+          "token": "BLANK",
+          "confidence": 1.0,
+          "ink": "",
+          "circled": false,
+          "text": ""
+        }
+      ]
+    },
+    {
+      "roll_no": "24108B0049",
+      "name": "AKSHYA GHARAT",
+      "batch": 3,
+      "sr_no": 12,
+      "cells": [
+        {
+          "slot": 1,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 2,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 3,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 4,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 5,
+          "token": "BLANK",
+          "confidence": 1.0,
+          "ink": "",
+          "circled": false,
+          "text": ""
+        }
+      ]
+    },
+    {
+      "roll_no": "24108B0050",
+      "name": "PRATHAVIRAJ CHAVAN",
+      "batch": 3,
+      "sr_no": 13,
+      "cells": [
+        {
+          "slot": 1,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 2,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 3,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 4,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 5,
+          "token": "BLANK",
+          "confidence": 1.0,
+          "ink": "",
+          "circled": false,
+          "text": ""
+        }
+      ]
+    },
+    {
+      "roll_no": "24108B0051",
+      "name": "TANISHA CHAWANDE",
+      "batch": 3,
+      "sr_no": 14,
+      "cells": [
+        {
+          "slot": 1,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 2,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 3,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 4,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 5,
+          "token": "BLANK",
+          "confidence": 1.0,
+          "ink": "",
+          "circled": false,
+          "text": ""
+        }
+      ]
+    },
+    {
+      "roll_no": "24108B0054",
+      "name": "RAKESH RAJARAO",
+      "batch": 3,
+      "sr_no": 15,
+      "cells": [
+        {
+          "slot": 1,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 2,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 3,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 4,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 5,
+          "token": "BLANK",
+          "confidence": 1.0,
+          "ink": "",
+          "circled": false,
+          "text": ""
+        }
+      ]
+    },
+    {
+      "roll_no": "25108B2004",
+      "name": "ARYA MURUDKAR",
+      "batch": 3,
+      "sr_no": 16,
+      "cells": [
+        {
+          "slot": 1,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 2,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 3,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 4,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 5,
+          "token": "BLANK",
+          "confidence": 1.0,
+          "ink": "",
+          "circled": false,
+          "text": ""
+        }
+      ]
+    },
+    {
+      "roll_no": "25108B2005",
+      "name": "DHRUV PATIL",
+      "batch": 3,
+      "sr_no": 17,
+      "cells": [
+        {
+          "slot": 1,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 2,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 3,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 4,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 5,
+          "token": "BLANK",
+          "confidence": 1.0,
+          "ink": "",
+          "circled": false,
+          "text": ""
+        }
+      ]
+    },
+    {
+      "roll_no": "25108B2006",
+      "name": "ARMASH ANSARI",
+      "batch": 3,
+      "sr_no": 18,
+      "cells": [
+        {
+          "slot": 1,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 2,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 3,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 4,
+          "token": "BLANK",
+          "confidence": 1.0,
+          "ink": "",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 5,
+          "token": "BLANK",
+          "confidence": 1.0,
+          "ink": "",
+          "circled": false,
+          "text": ""
+        }
+      ]
+    },
+    {
+      "roll_no": "24108B0055",
+      "name": "SEJAL SHAHANE",
+      "batch": 3,
+      "sr_no": 19,
+      "cells": [
+        {
+          "slot": 1,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 2,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 3,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 4,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 5,
+          "token": "BLANK",
+          "confidence": 1.0,
+          "ink": "",
+          "circled": false,
+          "text": ""
+        }
+      ]
+    },
+    {
+      "roll_no": "24108B0056",
+      "name": "BHUBAN WAKODE",
+      "batch": 3,
+      "sr_no": 20,
+      "cells": [
+        {
+          "slot": 1,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 2,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 3,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 4,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 5,
+          "token": "BLANK",
+          "confidence": 1.0,
+          "ink": "",
+          "circled": false,
+          "text": ""
+        }
+      ]
+    },
+    {
+      "roll_no": "24108B0057",
+      "name": "PARTH GULBHILE",
+      "batch": 3,
+      "sr_no": 21,
+      "cells": [
+        {
+          "slot": 1,
+          "token": "AB",
+          "confidence": 0.98,
+          "ink": "pink",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 2,
+          "token": "AB",
+          "confidence": 0.98,
+          "ink": "pink",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 3,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 4,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 5,
+          "token": "BLANK",
+          "confidence": 1.0,
+          "ink": "",
+          "circled": false,
+          "text": ""
+        }
+      ]
+    },
+    {
+      "roll_no": "24108B0058",
+      "name": "TANMAY GUNJAL",
+      "batch": 3,
+      "sr_no": 22,
+      "cells": [
+        {
+          "slot": 1,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 2,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 3,
+          "token": "AB",
+          "confidence": 0.98,
+          "ink": "pink",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 4,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 5,
+          "token": "BLANK",
+          "confidence": 1.0,
+          "ink": "",
+          "circled": false,
+          "text": ""
+        }
+      ]
+    },
+    {
+      "roll_no": "24108B0059",
+      "name": "AARYAN KHAMKAR",
+      "batch": 3,
+      "sr_no": 23,
+      "cells": [
+        {
+          "slot": 1,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 2,
+          "token": "AB",
+          "confidence": 0.98,
+          "ink": "pink",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 3,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 4,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 5,
+          "token": "BLANK",
+          "confidence": 1.0,
+          "ink": "",
+          "circled": false,
+          "text": ""
+        }
+      ]
+    },
+    {
+      "roll_no": "24108B0060",
+      "name": "YASH CHOBE",
+      "batch": 3,
+      "sr_no": 24,
+      "cells": [
+        {
+          "slot": 1,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 2,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 3,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 4,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 5,
+          "token": "BLANK",
+          "confidence": 1.0,
+          "ink": "",
+          "circled": false,
+          "text": ""
+        }
+      ]
+    },
+    {
+      "roll_no": "24108B0062",
+      "name": "RIYA LEPKAR",
+      "batch": 3,
+      "sr_no": 25,
+      "cells": [
+        {
+          "slot": 1,
+          "token": "AB",
+          "confidence": 0.98,
+          "ink": "pink",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 2,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 3,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 4,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 5,
+          "token": "BLANK",
+          "confidence": 1.0,
+          "ink": "",
+          "circled": false,
+          "text": ""
+        }
+      ]
+    },
+    {
+      "roll_no": "24108B0063",
+      "name": "DEVEN SONAWANE",
+      "batch": 4,
+      "sr_no": 26,
+      "cells": [
+        {
+          "slot": 1,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 2,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 3,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 4,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 5,
+          "token": "BLANK",
+          "confidence": 1.0,
+          "ink": "",
+          "circled": false,
+          "text": ""
+        }
+      ]
+    },
+    {
+      "roll_no": "24108B0064",
+      "name": "CHHAVI TALELE",
+      "batch": 4,
+      "sr_no": 27,
+      "cells": [
+        {
+          "slot": 1,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "black",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 2,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "black",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 3,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "black",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 4,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "black",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 5,
+          "token": "BLANK",
+          "confidence": 1.0,
+          "ink": "",
+          "circled": false,
+          "text": ""
+        }
+      ]
+    },
+    {
+      "roll_no": "24108B0065",
+      "name": "MANISH SABLE",
+      "batch": 4,
+      "sr_no": 28,
+      "cells": [
+        {
+          "slot": 1,
+          "token": "AB",
+          "confidence": 0.98,
+          "ink": "pink",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 2,
+          "token": "AB",
+          "confidence": 0.98,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 3,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 4,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 5,
+          "token": "BLANK",
+          "confidence": 1.0,
+          "ink": "",
+          "circled": false,
+          "text": ""
+        }
+      ]
+    },
+    {
+      "roll_no": "24108B0066",
+      "name": "ADITYA PAWAR",
+      "batch": 4,
+      "sr_no": 29,
+      "cells": [
+        {
+          "slot": 1,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 2,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 3,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 4,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 5,
+          "token": "BLANK",
+          "confidence": 1.0,
+          "ink": "",
+          "circled": false,
+          "text": ""
+        }
+      ]
+    },
+    {
+      "roll_no": "24108B0067",
+      "name": "AMOGH MALUSARE",
+      "batch": 4,
+      "sr_no": 30,
+      "cells": [
+        {
+          "slot": 1,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 2,
+          "token": "AB",
+          "confidence": 0.98,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 3,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 4,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 5,
+          "token": "BLANK",
+          "confidence": 1.0,
+          "ink": "",
+          "circled": false,
+          "text": ""
+        }
+      ]
+    },
+    {
+      "roll_no": "24108B0069",
+      "name": "PAALVI LANDE",
+      "batch": 4,
+      "sr_no": 31,
+      "cells": [
+        {
+          "slot": 1,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 2,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 3,
+          "token": "AB",
+          "confidence": 0.98,
+          "ink": "pink",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 4,
+          "token": "BLANK",
+          "confidence": 1.0,
+          "ink": "",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 5,
+          "token": "BLANK",
+          "confidence": 1.0,
+          "ink": "",
+          "circled": false,
+          "text": ""
+        }
+      ]
+    },
+    {
+      "roll_no": "24108B0070",
+      "name": "PARTH KARALKAR",
+      "batch": 4,
+      "sr_no": 32,
+      "cells": [
+        {
+          "slot": 1,
+          "token": "AB",
+          "confidence": 0.98,
+          "ink": "pink",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 2,
+          "token": "AB",
+          "confidence": 0.98,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 3,
+          "token": "AB",
+          "confidence": 0.98,
+          "ink": "pink",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 4,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 5,
+          "token": "BLANK",
+          "confidence": 1.0,
+          "ink": "",
+          "circled": false,
+          "text": ""
+        }
+      ]
+    },
+    {
+      "roll_no": "24108B0071",
+      "name": "MAYUR NAIK",
+      "batch": 4,
+      "sr_no": 33,
+      "cells": [
+        {
+          "slot": 1,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 2,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 3,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 4,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 5,
+          "token": "BLANK",
+          "confidence": 1.0,
+          "ink": "",
+          "circled": false,
+          "text": ""
+        }
+      ]
+    },
+    {
+      "roll_no": "24108B0072",
+      "name": "MITHIL KARAMBE",
+      "batch": 4,
+      "sr_no": 34,
+      "cells": [
+        {
+          "slot": 1,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "black",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 2,
+          "token": "ARROW_DOWN",
+          "confidence": 0.9,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 3,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 4,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 5,
+          "token": "BLANK",
+          "confidence": 1.0,
+          "ink": "",
+          "circled": false,
+          "text": ""
+        }
+      ]
+    },
+    {
+      "roll_no": "24108B0073",
+      "name": "SUJAL PUJARI",
+      "batch": 4,
+      "sr_no": 35,
+      "cells": [
+        {
+          "slot": 1,
+          "token": "AB",
+          "confidence": 0.98,
+          "ink": "pink",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 2,
+          "token": "AB",
+          "confidence": 0.98,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 3,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 4,
+          "token": "BLANK",
+          "confidence": 1.0,
+          "ink": "",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 5,
+          "token": "BLANK",
+          "confidence": 1.0,
+          "ink": "",
+          "circled": false,
+          "text": ""
+        }
+      ]
+    },
+    {
+      "roll_no": "24108B0074",
+      "name": "SIDHANT NELGE",
+      "batch": 4,
+      "sr_no": 36,
+      "cells": [
+        {
+          "slot": 1,
+          "token": "AB",
+          "confidence": 0.98,
+          "ink": "pink",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 2,
+          "token": "ARROW_DOWN",
+          "confidence": 0.9,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 3,
+          "token": "SIGN",
+          "confidence": 0.95,
+          "ink": "blue",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 4,
+          "token": "BLANK",
+          "confidence": 1.0,
+          "ink": "",
+          "circled": false,
+          "text": ""
+        },
+        {
+          "slot": 5,
+          "token": "BLANK",
+          "confidence": 1.0,
+          "ink": "",
+          "circled": false,
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "engine_used": "attendai_vision",
+  "cached": false,
+  "error": null
+}

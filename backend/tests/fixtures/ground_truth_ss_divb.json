@@ -1,0 +1,379 @@
+{
+  "subject_info": {
+    "class_name": "T.Y.B.TECH",
+    "subject": "SS",
+    "faculty": "SHP",
+    "division": "B",
+    "type": "Theory",
+    "academic_year": "2026-27(Odd)",
+    "week_no": "08"
+  },
+  "dates": [
+    {"col_idx": 0, "raw": "9/9/26", "iso": "2026-09-09"},
+    {"col_idx": 1, "raw": "23/9/26", "iso": "2026-09-23"},
+    {"col_idx": 2, "raw": "30/9/26", "iso": "2026-09-30"},
+    {"col_idx": 3, "raw": "7/10/26", "iso": "2026-10-07"}
+  ],
+  "students": [
+    {
+      "sr_no": 1,
+      "roll_no": "24108B0001",
+      "name": "VEDANT PATOLE",
+      "batch": 1,
+      "records": {
+        "2026-09-09": {"token": "SIGN", "status": "P", "ambiguous": false},
+        "2026-09-23": {"token": "SIGN", "status": "P", "ambiguous": false},
+        "2026-09-30": {"token": "SIGN", "status": "P", "ambiguous": false},
+        "2026-10-07": {"token": "SIGN", "status": "P", "ambiguous": false}
+      }
+    },
+    {
+      "sr_no": 2,
+      "roll_no": "24108B0002",
+      "name": "ARYA SURYAVANSHI",
+      "batch": 1,
+      "records": {
+        "2026-09-09": {"token": "SIGN", "status": "P", "ambiguous": false},
+        "2026-09-23": {"token": "SIGN", "status": "P", "ambiguous": false},
+        "2026-09-30": {"token": "SIGN", "status": "P", "ambiguous": false},
+        "2026-10-07": {"token": "SIGN", "status": "P", "ambiguous": false}
+      }
+    },
+    {
+      "sr_no": 3,
+      "roll_no": "24108B0005",
+      "name": "AYUSH SAWANT",
+      "batch": 1,
+      "records": {
+        "2026-09-09": {"token": "AB", "status": "A", "ambiguous": false},
+        "2026-09-23": {"token": "SIGN", "status": "P", "ambiguous": false},
+        "2026-09-30": {"token": "SIGN", "status": "P", "ambiguous": false},
+        "2026-10-07": {"token": "SIGN", "status": "P", "ambiguous": false}
+      }
+    },
+    {
+      "sr_no": 4,
+      "roll_no": "24108B0007",
+      "name": "VEDANT NIKUMBH",
+      "batch": 1,
+      "records": {
+        "2026-09-09": {"token": "SIGN", "status": "P", "ambiguous": false},
+        "2026-09-23": {"token": "SIGN", "status": "P", "ambiguous": false},
+        "2026-09-30": {"token": "SIGN", "status": "P", "ambiguous": false},
+        "2026-10-07": {"token": "SIGN", "status": "P", "ambiguous": false}
+      }
+    },
+    {
+      "sr_no": 5,
+      "roll_no": "24108B0012",
+      "name": "NEIL KHADAKBAN",
+      "batch": 1,
+      "records": {
+        "2026-09-09": {"token": "SIGN", "status": "P", "ambiguous": false},
+        "2026-09-23": {"token": "SIGN", "status": "P", "ambiguous": false},
+        "2026-09-30": {"token": "SIGN", "status": "P", "ambiguous": false},
+        "2026-10-07": {"token": "BLANK", "status": "NM", "ambiguous": false}
+      }
+    },
+    {
+      "sr_no": 6,
+      "roll_no": "24108B0013",
+      "name": "ARYANN SATWE",
+      "batch": 1,
+      "records": {
+        "2026-09-09": {"token": "SIGN", "status": "P", "ambiguous": false},
+        "2026-09-23": {"token": "SIGN", "status": "P", "ambiguous": false},
+        "2026-09-30": {"token": "AB", "status": "A", "ambiguous": false},
+        "2026-10-07": {"token": "BLANK", "status": "NM", "ambiguous": false}
+      }
+    },
+    {
+      "sr_no": 7,
+      "roll_no": "24108B0014",
+      "name": "PRIYANSHU GUPTA",
+      "batch": 1,
+      "records": {
+        "2026-09-09": {"token": "AB", "status": "A", "ambiguous": false},
+        "2026-09-23": {"token": "UNSURE", "status": "UNCERTAIN", "ambiguous": true, "note": "AB overwritten with blue signature"},
+        "2026-09-30": {"token": "SIGN", "status": "P", "ambiguous": false},
+        "2026-10-07": {"token": "BLANK", "status": "NM", "ambiguous": false}
+      }
+    },
+    {
+      "sr_no": 8,
+      "roll_no": "24108B0015",
+      "name": "SHRAVAHU SARAVADE",
+      "batch": 1,
+      "records": {
+        "2026-09-09": {"token": "SIGN", "status": "P", "ambiguous": false},
+        "2026-09-23": {"token": "SIGN", "status": "P", "ambiguous": false},
+        "2026-09-30": {"token": "SIGN", "status": "P", "ambiguous": false},
+        "2026-10-07": {"token": "SIGN", "status": "P", "ambiguous": false}
+      }
+    },
+    {
+      "sr_no": 9,
+      "roll_no": "24108B0016",
+      "name": "PUSHKARAJ KADAM",
+      "batch": 1,
+      "records": {
+        "2026-09-09": {"token": "ARROW_UP", "status": "A", "ambiguous": false, "note": "Pink arrow up to row 10 AB"},
+        "2026-09-23": {"token": "SIGN", "status": "P", "ambiguous": false},
+        "2026-09-30": {"token": "SIGN", "status": "P", "ambiguous": false},
+        "2026-10-07": {"token": "SIGN", "status": "P", "ambiguous": false}
+      }
+    },
+    {
+      "sr_no": 10,
+      "roll_no": "24108B0017",
+      "name": "AMEY NADHAVALE",
+      "batch": 1,
+      "records": {
+        "2026-09-09": {"token": "AB", "status": "A", "ambiguous": false},
+        "2026-09-23": {"token": "SIGN", "status": "P", "ambiguous": false},
+        "2026-09-30": {"token": "SIGN", "status": "P", "ambiguous": false},
+        "2026-10-07": {"token": "BLANK", "status": "NM", "ambiguous": false}
+      }
+    },
+    {
+      "sr_no": 11,
+      "roll_no": "24108B0018",
+      "name": "MOHAMMAD ZAMAN SHAIKH",
+      "batch": 1,
+      "records": {
+        "2026-09-09": {"token": "ARROW_DOWN", "status": "A", "ambiguous": false, "note": "Pink arrow down from row 10 AB"},
+        "2026-09-23": {"token": "AB", "status": "A", "ambiguous": false},
+        "2026-09-30": {"token": "SIGN", "status": "P", "ambiguous": false},
+        "2026-10-07": {"token": "BLANK", "status": "NM", "ambiguous": false}
+      }
+    },
+    {
+      "sr_no": 12,
+      "roll_no": "24108B0019",
+      "name": "PARAS SHAH",
+      "batch": 1,
+      "records": {
+        "2026-09-09": {"token": "ARROW_DOWN", "status": "A", "ambiguous": false, "note": "Pink arrow down chain from row 10 AB"},
+        "2026-09-23": {"token": "SIGN", "status": "P", "ambiguous": false},
+        "2026-09-30": {"token": "AB", "status": "A", "ambiguous": false},
+        "2026-10-07": {"token": "SIGN", "status": "P", "ambiguous": false}
+      }
+    },
+    {
+      "sr_no": 13,
+      "roll_no": "24108B0020",
+      "name": "SAHIL DAHAKE",
+      "batch": 1,
+      "records": {
+        "2026-09-09": {"token": "SIGN", "status": "P", "ambiguous": false},
+        "2026-09-23": {"token": "AB", "status": "A", "ambiguous": false},
+        "2026-09-30": {"token": "SIGN", "status": "P", "ambiguous": false},
+        "2026-10-07": {"token": "SIGN", "status": "P", "ambiguous": false}
+      }
+    },
+    {
+      "sr_no": 14,
+      "roll_no": "24108B0021",
+      "name": "YASH KHANVILKAR",
+      "batch": 1,
+      "records": {
+        "2026-09-09": {"token": "AB", "status": "A", "ambiguous": false},
+        "2026-09-23": {"token": "SIGN", "status": "P", "ambiguous": false},
+        "2026-09-30": {"token": "AB", "status": "A", "ambiguous": false},
+        "2026-10-07": {"token": "SIGN", "status": "P", "ambiguous": false}
+      }
+    },
+    {
+      "sr_no": 15,
+      "roll_no": "24108B0023",
+      "name": "ANJALI SHEWALE",
+      "batch": 1,
+      "records": {
+        "2026-09-09": {"token": "SIGN", "status": "P", "ambiguous": false},
+        "2026-09-23": {"token": "SIGN", "status": "P", "ambiguous": false},
+        "2026-09-30": {"token": "SIGN", "status": "P", "ambiguous": false},
+        "2026-10-07": {"token": "SIGN", "status": "P", "ambiguous": false}
+      }
+    },
+    {
+      "sr_no": 16,
+      "roll_no": "24108B0024",
+      "name": "VED SONGIRE",
+      "batch": 1,
+      "records": {
+        "2026-09-09": {"token": "SIGN", "status": "P", "ambiguous": false},
+        "2026-09-23": {"token": "SIGN", "status": "P", "ambiguous": false},
+        "2026-09-30": {"token": "SIGN", "status": "P", "ambiguous": false},
+        "2026-10-07": {"token": "SIGN", "status": "P", "ambiguous": false}
+      }
+    },
+    {
+      "sr_no": 17,
+      "roll_no": "24108B0025",
+      "name": "GUNJAN TALE",
+      "batch": 1,
+      "records": {
+        "2026-09-09": {"token": "SIGN", "status": "P", "ambiguous": false},
+        "2026-09-23": {"token": "AB", "status": "A", "ambiguous": false},
+        "2026-09-30": {"token": "SIGN", "status": "P", "ambiguous": false},
+        "2026-10-07": {"token": "SIGN", "status": "P", "ambiguous": false}
+      }
+    },
+    {
+      "sr_no": 18,
+      "roll_no": "24108B0026",
+      "name": "SHREEYA JOSHI",
+      "batch": 1,
+      "records": {
+        "2026-09-09": {"token": "SIGN", "status": "P", "ambiguous": false},
+        "2026-09-23": {"token": "SIGN", "status": "P", "ambiguous": false},
+        "2026-09-30": {"token": "SIGN", "status": "P", "ambiguous": false},
+        "2026-10-07": {"token": "SIGN", "status": "P", "ambiguous": false}
+      }
+    },
+    {
+      "sr_no": 19,
+      "roll_no": "24108B0027",
+      "name": "SHIVAM OJHA",
+      "batch": 1,
+      "records": {
+        "2026-09-09": {"token": "SIGN", "status": "P", "ambiguous": false},
+        "2026-09-23": {"token": "SIGN", "status": "P", "ambiguous": false},
+        "2026-09-30": {"token": "SIGN", "status": "P", "ambiguous": false},
+        "2026-10-07": {"token": "SIGN", "status": "P", "ambiguous": false}
+      }
+    },
+    {
+      "sr_no": 20,
+      "roll_no": "24108B0028",
+      "name": "SUJAL PAWAR",
+      "batch": 2,
+      "records": {
+        "2026-09-09": {"token": "SIGN", "status": "P", "ambiguous": false},
+        "2026-09-23": {"token": "SIGN", "status": "P", "ambiguous": false},
+        "2026-09-30": {"token": "SIGN", "status": "P", "ambiguous": false},
+        "2026-10-07": {"token": "SIGN", "status": "P", "ambiguous": false}
+      }
+    },
+    {
+      "sr_no": 21,
+      "roll_no": "24108B0029",
+      "name": "AVINASH DEVRAY",
+      "batch": 2,
+      "records": {
+        "2026-09-09": {"token": "SIGN", "status": "P", "ambiguous": false},
+        "2026-09-23": {"token": "SIGN", "status": "P", "ambiguous": false},
+        "2026-09-30": {"token": "SIGN", "status": "P", "ambiguous": false},
+        "2026-10-07": {"token": "SIGN", "status": "P", "ambiguous": false}
+      }
+    },
+    {
+      "sr_no": 22,
+      "roll_no": "25108B2001",
+      "name": "NIRJA HATI",
+      "batch": 2,
+      "records": {
+        "2026-09-09": {"token": "SIGN", "status": "P", "ambiguous": false},
+        "2026-09-23": {"token": "SIGN", "status": "P", "ambiguous": false},
+        "2026-09-30": {"token": "SIGN", "status": "P", "ambiguous": false},
+        "2026-10-07": {"token": "SIGN", "status": "P", "ambiguous": false}
+      }
+    },
+    {
+      "sr_no": 23,
+      "roll_no": "25108B2002",
+      "name": "VINIT SHAHA",
+      "batch": 2,
+      "records": {
+        "2026-09-09": {"token": "AB", "status": "A", "ambiguous": false},
+        "2026-09-23": {"token": "AB", "status": "A", "ambiguous": false},
+        "2026-09-30": {"token": "SIGN", "status": "P", "ambiguous": false},
+        "2026-10-07": {"token": "SIGN", "status": "P", "ambiguous": false}
+      }
+    },
+    {
+      "sr_no": 24,
+      "roll_no": "25108B2003",
+      "name": "ANUGRAH JAMDAADE",
+      "batch": 2,
+      "records": {
+        "2026-09-09": {"token": "SIGN", "status": "P", "ambiguous": false},
+        "2026-09-23": {"token": "SIGN", "status": "P", "ambiguous": false},
+        "2026-09-30": {"token": "SIGN", "status": "P", "ambiguous": false},
+        "2026-10-07": {"token": "BLANK", "status": "NM", "ambiguous": false}
+      }
+    },
+    {
+      "sr_no": 25,
+      "roll_no": "24108B0030",
+      "name": "YASH KHARAT",
+      "batch": 2,
+      "records": {
+        "2026-09-09": {"token": "ARROW_UP", "status": "A", "ambiguous": false, "note": "Pink arrow up to row 26 AB"},
+        "2026-09-23": {"token": "ARROW_UP", "status": "UNCERTAIN", "ambiguous": true, "note": "Top of long blue arrow span (anchored at row 27 AB)"},
+        "2026-09-30": {"token": "SIGN", "status": "P", "ambiguous": false},
+        "2026-10-07": {"token": "SIGN", "status": "P", "ambiguous": false}
+      }
+    },
+    {
+      "sr_no": 26,
+      "roll_no": "24108B0032",
+      "name": "ROHAN MUNDHE",
+      "batch": 2,
+      "records": {
+        "2026-09-09": {"token": "AB", "status": "A", "ambiguous": false},
+        "2026-09-23": {"token": "ARROW_SPAN", "status": "UNCERTAIN", "ambiguous": true, "note": "Inside long blue arrow span above row 27 AB"},
+        "2026-09-30": {"token": "AB", "status": "A", "ambiguous": false},
+        "2026-10-07": {"token": "BLANK", "status": "NM", "ambiguous": false}
+      }
+    },
+    {
+      "sr_no": 27,
+      "roll_no": "24108B0033",
+      "name": "ABDUR RAHMAN",
+      "batch": 2,
+      "records": {
+        "2026-09-09": {"token": "ARROW_DOWN", "status": "A", "ambiguous": false, "note": "Pink arrow down from row 26 AB"},
+        "2026-09-23": {"token": "AB", "status": "A", "ambiguous": false, "note": "Anchor AB in blue ink with bidirectional vertical arrow"},
+        "2026-09-30": {"token": "AB", "status": "A", "ambiguous": false},
+        "2026-10-07": {"token": "BLANK", "status": "NM", "ambiguous": false}
+      }
+    },
+    {
+      "sr_no": 28,
+      "roll_no": "24108B0034",
+      "name": "YASH DEOKAR",
+      "batch": 2,
+      "records": {
+        "2026-09-09": {"token": "SIGN", "status": "P", "ambiguous": false},
+        "2026-09-23": {"token": "ARROW_SPAN", "status": "UNCERTAIN", "ambiguous": true, "note": "Inside long blue arrow span below row 27 AB"},
+        "2026-09-30": {"token": "SIGN", "status": "P", "ambiguous": false},
+        "2026-10-07": {"token": "SIGN", "status": "P", "ambiguous": false}
+      }
+    },
+    {
+      "sr_no": 29,
+      "roll_no": "24108B0035",
+      "name": "SHIVAM PAGAR",
+      "batch": 2,
+      "records": {
+        "2026-09-09": {"token": "SIGN", "status": "P", "ambiguous": false},
+        "2026-09-23": {"token": "ARROW_SPAN", "status": "UNCERTAIN", "ambiguous": true, "note": "Inside long blue arrow span below row 27 AB"},
+        "2026-09-30": {"token": "AB", "status": "A", "ambiguous": false},
+        "2026-10-07": {"token": "SIGN", "status": "P", "ambiguous": false}
+      }
+    },
+    {
+      "sr_no": 30,
+      "roll_no": "24108B0036",
+      "name": "KANAK LADE",
+      "batch": 2,
+      "records": {
+        "2026-09-09": {"token": "AB", "status": "A", "ambiguous": false, "note": "Independent AB with blue diagonal flourish"},
+        "2026-09-23": {"token": "ARROW_DOWN", "status": "UNCERTAIN", "ambiguous": true, "note": "Bottom arrowhead of long blue vertical line"},
+        "2026-09-30": {"token": "AB", "status": "A", "ambiguous": false},
+        "2026-10-07": {"token": "BLANK", "status": "NM", "ambiguous": false}
+      }
+    }
+  ]
+}

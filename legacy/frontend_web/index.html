@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AttendAI - Enterprise Portal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background-color: #FAFAFA; color: #323130; }
+        
+        /* Enterprise SaaS Styles */
+        .ms-btn-primary { background-color: #0078D4; color: white; border: 1px solid transparent; transition: all 0.2s; }
+        .ms-btn-primary:hover:not(:disabled) { background-color: #106EBE; }
+        .ms-btn-primary:disabled { background-color: #F3F2F1; color: #A19F9D; cursor: not-allowed; }
+        
+        .ms-btn-secondary { background-color: #FFFFFF; color: #323130; border: 1px solid #C8C6C4; transition: all 0.2s; }
+        .ms-btn-secondary:hover { background-color: #F3F2F1; }
+
+        .ms-card { background: #FFFFFF; border: 1px solid #EDEBE9; border-radius: 6px; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }
+        
+        /* Sidebar Nav */
+        .nav-btn { display: flex; align-items: center; width: 100%; padding: 8px 12px; border-radius: 6px; font-size: 13px; font-weight: 500; color: #605E5C; transition: all 0.15s; margin-bottom: 4px; }
+        .nav-btn:hover:not(.active) { background-color: #F3F2F1; color: #323130; }
+        .nav-btn.active { background-color: #EFF6FC; color: #0078D4; font-weight: 600; }
+        .nav-btn svg { margin-right: 12px; opacity: 0.7; }
+        .nav-btn.active svg { opacity: 1; color: #0078D4; }
+
+        /* Data Grid */
+        .data-grid th { background-color: #F8F8F8; color: #605E5C; font-weight: 600; border-bottom: 2px solid #EDEBE9; padding: 10px 16px; font-size: 12px; text-align: left; text-transform: uppercase; letter-spacing: 0.05em; }
+        .data-grid td { border-bottom: 1px solid #EDEBE9; padding: 12px 16px; font-size: 13px; color: #323130; }
+        .data-grid tr:hover { background-color: #FDFDFD; }
+
+        /* Status Pills */
+        .badge { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 11px; font-weight: 600; border: 1px solid transparent; }
+        .badge-success { background: #DFF6DD; color: #107C10; border-color: #C3E8BF; }
+        .badge-error { background: #FDE7E9; color: #A4262C; border-color: #FBC5C9; }
+        .badge-warning { background: #FFF4CE; color: #8A8886; border-color: #FDE7A9; }
+        .badge-neutral { background: #F3F2F1; color: #605E5C; border-color: #EDEBE9; }
+        
+        /* Dropdowns */
+        .status-select { appearance: none; border: 1px solid transparent; border-radius: 4px; padding: 4px 24px 4px 8px; font-size: 12px; font-weight: 600; cursor: pointer; transition: all 0.2s; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23605E5C' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 6px center; background-size: 14px; }
+        .status-select:focus { outline: none; border-color: #0078D4; box-shadow: 0 0 0 2px rgba(0,120,212,0.2); }
+        .status-select.P { background-color: #DFF6DD; color: #107C10; }
+        .status-select.A { background-color: #FDE7E9; color: #A4262C; }
+        .status-select.Q { background-color: #FFF4CE; color: #8A8886; }
+        .status-select.NM { background-color: #F3F2F1; color: #605E5C; }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar { width: 8px; height: 8px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #C8C6C4; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #A19F9D; }
+    </style>
+</head>
+<body class="flex h-screen overflow-hidden">
+
+    <!-- Sidebar (Left Rail) -->
+    <aside class="w-64 bg-white border-r border-[#EDEBE9] flex flex-col z-20 flex-shrink-0">
+        
+        <!-- Logo -->
+        <div class="h-16 flex items-center px-6 border-b border-[#EDEBE9]">
+            <div class="w-8 h-8 bg-[#0078D4] rounded flex items-center justify-center mr-3 shadow-sm">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            </div>
+            <span class="font-bold text-[16px] tracking-wide text-[#323130]">AttendAI<span class="text-[#0078D4]">.</span></span>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="flex-1 py-6 px-3 flex flex-col">
+            <p class="px-3 text-[11px] font-semibold text-[#A19F9D] uppercase tracking-wider mb-2">Workspace</p>
+            
+            <button onclick="switchTab('upload')" id="nav-upload" class="nav-btn active">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+                Upload & Pipeline
+            </button>
+            <button onclick="switchTab('review')" id="nav-review" class="nav-btn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+                Data Grid Review
+            </button>
+            <button onclick="switchTab('analytics')" id="nav-analytics" class="nav-btn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                Evaluation Matrix
+            </button>
+            <button onclick="switchTab('export')" id="nav-export" class="nav-btn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="12" y1="18" x2="12" y2="12"></line><line x1="9" y1="15" x2="15" y2="15"></line></svg>
+                Finalize & Export
+            </button>
+        </nav>
+
+        <!-- User Profile -->
+        <div class="p-4 border-t border-[#EDEBE9] hover:bg-[#F3F2F1] cursor-pointer transition-colors">
+            <div class="flex items-center gap-3">
+                <div class="w-9 h-9 rounded-full bg-[#EFF6FC] border border-[#C7E0F4] text-[#0078D4] flex items-center justify-center font-bold text-[13px]">
+                    AD
+                </div>
+                <div>
+                    <p class="text-[13px] font-semibold text-[#323130] leading-tight">Admin Portal</p>
+                    <p class="text-[11px] text-[#605E5C]">System Administrator</p>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Content Wrapper -->
+    <div class="flex-1 flex flex-col overflow-hidden bg-[#FAFAFA]">
+        
+        <!-- Top Navbar -->
+        <header class="h-16 bg-white border-b border-[#EDEBE9] flex items-center justify-between px-8 z-10 flex-shrink-0 shadow-sm">
+            
+            <!-- Breadcrumbs -->
+            <div class="flex items-center text-[13px]">
+                <span class="text-[#605E5C] cursor-pointer hover:text-[#0078D4]">Workspace</span>
+                <svg class="mx-2 text-[#C8C6C4]" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                <span id="breadcrumb-text" class="font-semibold text-[#323130]">Upload & Pipeline</span>
+            </div>
+
+            <!-- Global Search & Actions -->
+            <div class="flex items-center gap-6">
+                <div class="relative">
+                    <svg class="absolute left-3 top-2.5 text-[#A19F9D]" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    <input type="text" placeholder="Search records, models..." class="pl-9 pr-4 py-2 bg-[#F3F2F1] border border-transparent rounded-md text-[13px] w-64 focus:bg-white focus:border-[#0078D4] focus:ring-1 focus:ring-[#0078D4] outline-none transition-all">
+                </div>
+                <button class="text-[#605E5C] hover:text-[#323130] relative">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+                    <span class="absolute top-0 right-0 w-2 h-2 bg-[#A4262C] rounded-full border border-white"></span>
+                </button>
+            </div>
+        </header>
+
+        <!-- Scrollable Page Content -->
+        <main class="flex-1 overflow-y-auto p-8">
+            
+            <!-- Dynamic Page Header -->
+            <div class="flex justify-between items-end mb-8">
+                <div>
+                    <h1 id="page-title" class="text-2xl font-bold text-[#323130]">Process New Batch</h1>
+                    <p id="page-subtitle" class="text-[14px] text-[#605E5C] mt-1">Upload an institutional document to initiate the extraction pipeline.</p>
+                </div>
+                <div id="header-actions">
+                    <!-- Action buttons injected via JS depending on active tab -->
+                </div>
+            </div>
+
+            <!-- SECTION: UPLOAD -->
+            <section id="section-upload" class="block max-w-6xl">
+                <div class="grid grid-cols-1 lg:grid-cols-5 gap-6">
+                    
+                    <!-- Left: Upload Zone -->
+                    <div class="lg:col-span-3 ms-card flex flex-col h-[480px]">
+                        <div class="p-4 border-b border-[#EDEBE9] bg-[#F8F8F8] flex justify-between items-center">
+                            <h3 class="text-[13px] font-semibold uppercase tracking-wider text-[#323130]">Source Document</h3>
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col relative">
+                            <!-- Dropzone -->
+                            <div id="dropzone" class="absolute inset-6 border-2 border-dashed border-[#C8C6C4] bg-[#FAFAFA] rounded-md flex flex-col items-center justify-center cursor-pointer hover:bg-[#F3F2F1] transition-colors z-10">
+                                <input type="file" id="fileInput" class="absolute inset-0 w-full h-full opacity-0 cursor-pointer" accept="image/*">
+                                <div class="w-12 h-12 rounded-full bg-[#EFF6FC] flex items-center justify-center mb-4">
+                                    <svg class="text-[#0078D4]" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+                                </div>
+                                <p class="text-[15px] font-semibold text-[#323130]">Click or drag file to upload</p>
+                                <p class="text-[13px] text-[#605E5C] mt-1">PNG, JPG up to 10MB</p>
+                            </div>
+
+                            <!-- Preview (Hidden initially) -->
+                            <div id="imagePreviewContainer" class="hidden absolute inset-6 border border-[#EDEBE9] bg-[#F3F2F1] flex items-center justify-center rounded-md z-20 overflow-hidden group">
+                                <img id="imagePreview" src="" alt="Preview" class="max-w-full max-h-full object-contain">
+                                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                    <button onclick="clearImage()" class="ms-btn-secondary px-4 py-2 font-semibold text-[13px] shadow-lg flex items-center gap-2">
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                                        Remove Image
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Execution Engine -->
+                    <div class="lg:col-span-2 ms-card h-[480px] flex flex-col">
+                        <div class="p-4 border-b border-[#EDEBE9] bg-[#F8F8F8]">
+                            <h3 class="text-[13px] font-semibold uppercase tracking-wider text-[#323130]">Execution Engine</h3>
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col">
+                            <button id="processBtn" onclick="processImage()" disabled class="ms-btn-primary w-full py-3 rounded text-[14px] font-semibold mb-6 shadow-sm flex justify-center items-center gap-2">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                                Initialize Pipeline
+                            </button>
+
+                            <!-- Process UI -->
+                            <div id="processUI" class="flex-1 bg-[#FAFAFA] border border-[#EDEBE9] rounded-md p-5 flex flex-col justify-center items-center text-center">
+                                <svg class="text-[#C8C6C4] mb-3" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                                <p class="text-[13px] font-semibold text-[#605E5C]">System Idle</p>
+                                <p class="text-[12px] text-[#A19F9D] mt-1">Upload a document to begin.</p>
+                            </div>
+
+                            <!-- Stepper (Hidden initially) -->
+                            <div id="stepper" class="hidden flex-1 flex flex-col justify-center space-y-5 px-2">
+                                <div class="flex items-center gap-3 text-[#A19F9D]" id="step-1">
+                                    <div class="step-icon w-6 h-6 rounded-full border-2 border-current flex items-center justify-center text-[10px] font-bold">1</div>
+                                    <span class="text-[13px] font-medium">Image Deskew & Filtering</span>
+                                </div>
+                                <div class="flex items-center gap-3 text-[#A19F9D]" id="step-2">
+                                    <div class="step-icon w-6 h-6 rounded-full border-2 border-current flex items-center justify-center text-[10px] font-bold">2</div>
+                                    <span class="text-[13px] font-medium">OCR Grid Extraction</span>
+                                </div>
+                                <div class="flex items-center gap-3 text-[#A19F9D]" id="step-3">
+                                    <div class="step-icon w-6 h-6 rounded-full border-2 border-current flex items-center justify-center text-[10px] font-bold">3</div>
+                                    <span class="text-[13px] font-medium">Computer Vision (Signatures)</span>
+                                </div>
+                                <div class="flex items-center gap-3 text-[#A19F9D]" id="step-4">
+                                    <div class="step-icon w-6 h-6 rounded-full border-2 border-current flex items-center justify-center text-[10px] font-bold">4</div>
+                                    <span class="text-[13px] font-medium">Algorithmic Density Check</span>
+                                </div>
+                                <div class="flex items-center gap-3 text-[#A19F9D]" id="step-5">
+                                    <div class="step-icon w-6 h-6 rounded-full border-2 border-current flex items-center justify-center text-[10px] font-bold">5</div>
+                                    <span class="text-[13px] font-medium">Data Matrix Synthesis</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- SECTION: REVIEW -->
+            <section id="section-review" class="hidden">
+                <!-- Status Bar -->
+                <div class="flex gap-4 mb-6">
+                    <div class="ms-card flex-1 p-4 flex items-center justify-between">
+                        <div>
+                            <p class="text-[11px] font-semibold text-[#605E5C] uppercase">Total Records</p>
+                            <p id="kpi-total" class="text-2xl font-light text-[#323130] mt-1">0</p>
+                        </div>
+                        <div class="w-10 h-10 bg-[#F3F2F1] rounded flex items-center justify-center text-[#605E5C]"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></div>
+                    </div>
+                    <div class="ms-card flex-1 p-4 flex items-center justify-between border-b-4 border-b-[#107C10]">
+                        <div>
+                            <p class="text-[11px] font-semibold text-[#107C10] uppercase">Present</p>
+                            <p id="kpi-present" class="text-2xl font-light text-[#323130] mt-1">0</p>
+                        </div>
+                    </div>
+                    <div class="ms-card flex-1 p-4 flex items-center justify-between border-b-4 border-b-[#A4262C]">
+                        <div>
+                            <p class="text-[11px] font-semibold text-[#A4262C] uppercase">Absent</p>
+                            <p id="kpi-absent" class="text-2xl font-light text-[#323130] mt-1">0</p>
+                        </div>
+                    </div>
+                    <div class="ms-card flex-1 p-4 flex items-center justify-between border-b-4 border-b-[#F5A623]">
+                        <div>
+                            <p class="text-[11px] font-semibold text-[#8A8886] uppercase">Flagged For Review</p>
+                            <p id="kpi-uncertain" class="text-2xl font-light text-[#323130] mt-1">0</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Data Grid Container -->
+                <div class="ms-card overflow-hidden flex flex-col">
+                    <div class="bg-[#F8F8F8] p-3 border-b border-[#EDEBE9] flex justify-between items-center">
+                        <div class="flex gap-2">
+                            <button class="ms-btn-secondary px-3 py-1.5 text-[12px] flex items-center gap-1 font-semibold rounded"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="21" x2="4" y2="14"></line><line x1="4" y1="10" x2="4" y2="3"></line><line x1="12" y1="21" x2="12" y2="12"></line><line x1="12" y1="8" x2="12" y2="3"></line><line x1="20" y1="21" x2="20" y2="16"></line><line x1="20" y1="12" x2="20" y2="3"></line><line x1="1" y1="14" x2="7" y2="14"></line><line x1="9" y1="8" x2="15" y2="8"></line><line x1="17" y1="16" x2="23" y2="16"></line></svg> Filter</button>
+                            <label class="flex items-center gap-2 px-3 py-1.5 hover:bg-[#EDEBE9] rounded cursor-pointer transition">
+                                <input type="checkbox" id="filterUncertain" onchange="filterTable()" class="w-4 h-4 accent-[#0078D4] rounded-sm">
+                                <span class="text-[12px] font-semibold text-[#323130]">Show Flags Only</span>
+                            </label>
+                        </div>
+                        <span class="text-[12px] text-[#A19F9D]">Auto-saved to memory</span>
+                    </div>
+                    <div class="overflow-x-auto max-h-[600px] bg-white">
+                        <table class="w-full data-grid" id="dataTable">
+                            <thead class="sticky top-0 z-10 bg-[#F8F8F8] shadow-sm">
+                                <tr id="tableHeader">
+                                    <th class="w-40 border-r border-[#EDEBE9]">Identifier</th>
+                                    <th class="border-r border-[#EDEBE9]">Subject Name</th>
+                                    <th class="w-48">Status Matrix</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tableBody">
+                                <tr>
+                                    <td colspan="5" class="py-12 text-center text-[#A19F9D] text-[14px]">No system data in memory.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- SECTION: ANALYTICS -->
+            <section id="section-analytics" class="hidden">
+                <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
+                    <!-- Stat Highlights -->
+                    <div class="ms-card p-5 xl:col-span-1 bg-gradient-to-br from-[#0078D4] to-[#005A9E] text-white rounded-md flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-[14px] font-semibold opacity-90">Overall Confidence</h3>
+                            <p class="text-4xl font-light mt-2">97.8%</p>
+                        </div>
+                        <div class="mt-6">
+                            <div class="text-[11px] font-mono opacity-80 mb-1">mAP@0.5 = 0.942</div>
+                            <div class="text-[11px] font-mono opacity-80 mb-1">Precision = 0.915</div>
+                            <div class="text-[11px] font-mono opacity-80">Recall = 0.930</div>
+                        </div>
+                    </div>
+
+                    <!-- Density -->
+                    <div class="ms-card p-5 xl:col-span-3">
+                        <h4 class="text-[13px] font-semibold text-[#323130] mb-4 uppercase tracking-wider">Training Loss (Obj, Box, Cls) vs Epochs</h4>
+                        <div class="h-48 relative"><canvas id="c-loss"></canvas></div>
+                    </div>
+
+                    <!-- 2x2 Grid -->
+                    <div class="ms-card p-5"><h4 class="text-[12px] font-semibold text-[#605E5C] uppercase mb-4">Precision Curve</h4><canvas id="c-precision"></canvas></div>
+                    <div class="ms-card p-5"><h4 class="text-[12px] font-semibold text-[#605E5C] uppercase mb-4">Recall Curve</h4><canvas id="c-recall"></canvas></div>
+                    <div class="ms-card p-5"><h4 class="text-[12px] font-semibold text-[#605E5C] uppercase mb-4">mAP Trajectory</h4><canvas id="c-map"></canvas></div>
+                    <div class="ms-card p-5"><h4 class="text-[12px] font-semibold text-[#605E5C] uppercase mb-4">F1 Score Contour</h4><canvas id="c-f1"></canvas></div>
+
+                    <!-- Row 3 -->
+                    <div class="ms-card p-5 xl:col-span-2 flex items-center justify-center gap-8">
+                        <div class="w-1/2">
+                            <h4 class="text-[12px] font-semibold text-[#605E5C] uppercase mb-4 text-center">Dataset Augmentation</h4>
+                            <canvas id="c-dataset"></canvas>
+                        </div>
+                        <div class="w-1/2">
+                            <h4 class="text-[12px] font-semibold text-[#605E5C] uppercase mb-4 text-center">Class Distribution</h4>
+                            <canvas id="c-balance"></canvas>
+                        </div>
+                    </div>
+                    
+                    <div class="ms-card p-5 xl:col-span-2">
+                        <h4 class="text-[12px] font-semibold text-[#605E5C] uppercase mb-4">Precision-Recall Matrix</h4>
+                        <div class="h-48 relative"><canvas id="c-pr"></canvas></div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- Script overlay -->
+    <script src="/static/script.js"></script>
+</body>
+</html>
