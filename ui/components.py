@@ -150,15 +150,19 @@ def inject_global_styles():
 
     @media (max-width: 768px) {{
         .block-container {{
-            padding-left: 1.25rem !important;
-            padding-right: 1.25rem !important;
+            padding-left: 12px !important;
+            padding-right: 12px !important;
+            padding-top: 0 !important;
+            padding-bottom: 3rem !important;
         }}
     }}
 
-    @media (max-width: 390px) {{
+    @media (max-width: 480px) {{
         .block-container {{
-            padding-left: 14px !important;
-            padding-right: 14px !important;
+            padding-left: 10px !important;
+            padding-right: 10px !important;
+            padding-top: 0 !important;
+            padding-bottom: 2.5rem !important;
         }}
     }}
 
@@ -834,6 +838,245 @@ def inject_global_styles():
         align-items: center;
         justify-content: space-between;
         margin-top: 24px;
+    }}
+
+    /* 16. Comprehensive Mobile Display & Responsive Overrides (max-width: 768px and 420px) */
+    @media (max-width: 768px) {{
+        /* Typography scale on mobile */
+        h1, .page-title {{
+            font-size: 1.45rem !important;
+            line-height: 1.2 !important;
+            margin-bottom: 4px !important;
+        }}
+
+        h2, .section-title {{
+            font-size: 1.25rem !important;
+            line-height: 1.25 !important;
+            margin-bottom: 4px !important;
+        }}
+
+        h3, .card-title {{
+            font-size: 1.05rem !important;
+            line-height: 1.3 !important;
+        }}
+
+        .helper-text, .text-secondary {{
+            font-size: 0.8125rem !important;
+            line-height: 1.45 !important;
+        }}
+
+        /* Ensure 16px minimum font size on mobile inputs to avoid iOS Safari auto-zoom */
+        input, select, textarea,
+        [data-baseweb="input"] input,
+        [data-baseweb="base-input"] input {{
+            font-size: 16px !important;
+        }}
+
+        /* Topbar Mobile Optimization */
+        .attendai-topbar {{
+            height: auto !important;
+            min-height: 52px !important;
+            padding: 8px 12px !important;
+            margin-bottom: 14px !important;
+            flex-wrap: wrap !important;
+            gap: 8px !important;
+        }}
+
+        .attendai-brand-text {{
+            font-size: 1.25rem !important;
+        }}
+
+        .attendai-breadcrumb {{
+            font-size: 0.8125rem !important;
+            margin-left: 10px !important;
+            padding-left: 10px !important;
+            max-width: 140px !important;
+            white-space: nowrap !important;
+            overflow: hidden !important;
+            text-overflow: ellipsis !important;
+        }}
+
+        .attendai-topbar-right {{
+            gap: 8px !important;
+        }}
+
+        .attendai-engine-chip {{
+            padding: 4px 10px !important;
+            font-size: 0.75rem !important;
+        }}
+
+        .attendai-avatar {{
+            width: 28px !important;
+            height: 28px !important;
+            font-size: 0.75rem !important;
+        }}
+
+        /* Tabs Navigation on Mobile */
+        .stTabs [data-baseweb="tab-list"] {{
+            gap: 2px !important;
+            justify-content: space-between !important;
+        }}
+
+        .stTabs [data-baseweb="tab"] {{
+            padding: 8px 10px !important;
+            font-size: 0.8125rem !important;
+        }}
+
+        /* Stat Strip: 2x2 Clean Grid on Mobile */
+        .stat-strip {{
+            display: grid !important;
+            grid-template-columns: 1fr 1fr !important;
+            gap: 10px !important;
+            padding: 12px 14px !important;
+            margin-bottom: 16px !important;
+        }}
+
+        .stat-item {{
+            padding: 4px 6px !important;
+            border-right: none !important;
+        }}
+
+        .stat-item:nth-child(1), .stat-item:nth-child(2) {{
+            border-bottom: 1px solid var(--line) !important;
+            padding-bottom: 8px !important;
+        }}
+
+        .stat-value {{
+            font-size: 1.6rem !important;
+            line-height: 1.1 !important;
+        }}
+
+        .stat-label {{
+            font-size: 0.78rem !important;
+            margin-top: 2px !important;
+        }}
+
+        /* Summary Strip: 2x2 Balanced Grid on Mobile */
+        .summary-strip {{
+            display: grid !important;
+            grid-template-columns: 1fr 1fr !important;
+            gap: 8px !important;
+            margin: 10px 0 14px 0 !important;
+        }}
+
+        .summary-chip {{
+            padding: 6px 10px !important;
+            font-size: 0.78rem !important;
+            justify-content: space-between !important;
+        }}
+
+        /* Stepper Sequence: Compact 1-line Progress with Active Label */
+        .stepper-container {{
+            padding: 10px 12px !important;
+            margin-bottom: 16px !important;
+        }}
+
+        .stepper-step {{
+            gap: 6px !important;
+        }}
+
+        .step-circle {{
+            width: 22px !important;
+            height: 22px !important;
+            font-size: 11px !important;
+        }}
+
+        .stepper-step:not(.active) span:not(.step-circle) {{
+            display: none !important;
+        }}
+
+        .stepper-step.active span:not(.step-circle) {{
+            font-size: 0.78rem !important;
+            font-weight: 600 !important;
+        }}
+
+        .stepper-divider {{
+            margin: 0 6px !important;
+        }}
+
+        /* Touch-Friendly Controls & Large Buttons */
+        .stButton>button,
+        button[data-testid="baseButton-secondary"],
+        button[data-testid="baseButton-primary"],
+        a[data-testid="baseLinkButton-primary"] {{
+            min-height: 42px !important;
+            padding: 8px 12px !important;
+            font-size: 0.875rem !important;
+        }}
+
+        /* Cards on Mobile */
+        div[data-testid="stVerticalBlockBorderWrapper"] {{
+            padding: 10px !important;
+            margin-bottom: 10px !important;
+        }}
+
+        .card-name {{
+            font-size: 1.05rem !important;
+        }}
+
+        .card-meta {{
+            font-size: 0.78rem !important;
+        }}
+
+        .card-stats-row {{
+            font-size: 0.78rem !important;
+            gap: 8px !important;
+            flex-wrap: wrap !important;
+            padding-top: 8px !important;
+        }}
+
+        /* Smooth Mobile Scrolling on Tables and Data Editor */
+        [data-testid="stDataEditor"],
+        [data-testid="stDataFrame"],
+        .attendai-table-container {{
+            -webkit-overflow-scrolling: touch !important;
+            overflow-x: auto !important;
+            width: 100% !important;
+            border-radius: var(--radius-control) !important;
+        }}
+
+        .attendai-table th,
+        .attendai-table td {{
+            padding: 8px 8px !important;
+            font-size: 12.5px !important;
+            height: 40px !important;
+        }}
+
+        .sticky-name-col {{
+            min-width: 125px !important;
+            max-width: 145px !important;
+        }}
+
+        /* Sticky Action Bar on Mobile */
+        .review-action-bar {{
+            padding: 10px 14px !important;
+            flex-direction: column !important;
+            align-items: flex-start !important;
+            gap: 6px !important;
+            margin-top: 14px !important;
+        }}
+
+        /* File Uploader Padding */
+        [data-testid="stFileUploaderDropzone"] {{
+            padding: 16px 10px !important;
+        }}
+
+        /* Modals & Popovers on Mobile */
+        [data-testid="stDialog"] div[role="dialog"] {{
+            width: 95vw !important;
+            max-width: 95vw !important;
+            padding: 14px !important;
+        }}
+
+        div[data-baseweb="popover"] {{
+            max-width: 92vw !important;
+        }}
+    }}
+
+    @media (max-width: 420px) {{
+        .attendai-breadcrumb {{
+            display: none !important;
+        }}
     }}
     </style>
     """

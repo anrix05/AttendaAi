@@ -293,7 +293,7 @@ def render_home_view():
     subjects = api_get("/api/subjects") or []
 
     # 2. Ruled Page Header Band
-    h_col1, h_col2 = st.columns([4, 1], vertical_alignment="center")
+    h_col1, h_col2 = st.columns([3, 1], vertical_alignment="center")
     with h_col1:
         render_ruled_header(
             "Your subjects",
@@ -328,7 +328,7 @@ def render_home_view():
         return
 
     # 4. Search and Segmented Filter Bar
-    s_col1, s_col2 = st.columns([3, 1])
+    s_col1, s_col2 = st.columns([2, 1])
     with s_col1:
         search_query = st.text_input("Search subjects", placeholder="Search by name, code, faculty...", label_visibility="collapsed")
     with s_col2:
@@ -639,15 +639,15 @@ def render_workspace_view():
             c_paper, c_review = st.columns([1, 2], gap="large")
 
             with c_paper:
-                st.markdown("##### Scanned register sheet")
-                if st.session_state.get("last_uploaded_bytes"):
-                    st.image(st.session_state["last_uploaded_bytes"], use_container_width=True)
-                else:
-                    default_fix = Path("backend/tests/fixtures/images/09_sr31_66_multi_dates.png")
-                    if default_fix.exists():
-                        st.image(str(default_fix), use_container_width=True)
+                with st.expander("📄 View scanned sheet photo", expanded=False):
+                    if st.session_state.get("last_uploaded_bytes"):
+                        st.image(st.session_state["last_uploaded_bytes"], use_container_width=True)
                     else:
-                        st.info("No sheet image preview available.")
+                        default_fix = Path("backend/tests/fixtures/images/09_sr31_66_multi_dates.png")
+                        if default_fix.exists():
+                            st.image(str(default_fix), use_container_width=True)
+                        else:
+                            st.info("No sheet image preview available.")
 
             with c_review:
                 # Segmented Control for Review mode
@@ -680,23 +680,26 @@ def render_workspace_view():
                         </div>
                         """)
 
-                        q_cols = st.columns(4)
-                        with q_cols[0]:
+                        # 2x2 grid: Finger-friendly on mobile, crisp on desktop
+                        q_r1_c1, q_r1_c2 = st.columns(2)
+                        with q_r1_c1:
                             if st.button("Present (P)", key="qf_p", use_container_width=True, type="primary"):
                                 df.at[item["row_idx"], item["col_key"]] = "P"
                                 st.session_state.review_df = df
                                 st.rerun()
-                        with q_cols[1]:
+                        with q_r1_c2:
                             if st.button("Absent (A)", key="qf_a", use_container_width=True):
                                 df.at[item["row_idx"], item["col_key"]] = "A"
                                 st.session_state.review_df = df
                                 st.rerun()
-                        with q_cols[2]:
+
+                        q_r2_c1, q_r2_c2 = st.columns(2)
+                        with q_r2_c1:
                             if st.button("Not marked (NM)", key="qf_nm", use_container_width=True):
                                 df.at[item["row_idx"], item["col_key"]] = "NM"
                                 st.session_state.review_df = df
                                 st.rerun()
-                        with q_cols[3]:
+                        with q_r2_c2:
                             if st.button("Not applicable (NA)", key="qf_na", use_container_width=True):
                                 df.at[item["row_idx"], item["col_key"]] = "NA"
                                 st.session_state.review_df = df
@@ -704,7 +707,7 @@ def render_workspace_view():
 
                 # ── MODE B: FULL MATRIX GRID ──────────────────────
                 else:
-                    f_c1, f_c2, f_c3 = st.columns([1.5, 1.5, 2], vertical_alignment="bottom")
+                    f_c1, f_c2 = st.columns(2, vertical_alignment="bottom")
                     with f_c1:
                         batch_filter = st.selectbox("Filter batch", ["All Batches", "Batch 1", "Batch 2", "Batch 3", "Batch 4"], key="grid_batch_filter")
                     with f_c2:
@@ -739,14 +742,14 @@ def render_workspace_view():
                                         st.session_state.review_df.at[idx, target_ck] = "P"
                                     st.toast(f"Marked {len(nm_matches)} NM students as Present on {target_date_name}")
                                     st.rerun()
-                    with f_c3:
-                        grid_view = st.segmented_control(
-                            "Grid view",
-                            ["✏️ Double-click editable grid", "📋 Visual pills ledger"],
-                            default="✏️ Double-click editable grid",
-                            label_visibility="collapsed",
-                            key="grid_view_mode",
-                        )
+
+                    grid_view = st.segmented_control(
+                        "Grid view",
+                        ["✏️ Double-click editable grid", "📋 Visual pills ledger"],
+                        default="✏️ Double-click editable grid",
+                        label_visibility="collapsed",
+                        key="grid_view_mode",
+                    )
 
                     if grid_view == "✏️ Double-click editable grid":
                         # Prepare filtered view
@@ -987,7 +990,7 @@ def render_workspace_view():
 
     # ── TAB 3: STUDENTS ──────────────────────────────────────
     with tab_students:
-        s_head_col1, s_head_col2 = st.columns([3, 1], vertical_alignment="center")
+        s_head_col1, s_head_col2 = st.columns([2, 1], vertical_alignment="center")
         with s_head_col1:
             st.markdown("#### Enrolled Students")
             st.caption("Official subject enrollment list with assigned batches and sequential serial numbers.")
@@ -1005,7 +1008,7 @@ def render_workspace_view():
 
         if students:
             # Batch filter & Search
-            f_col1, f_col2 = st.columns([1, 2])
+            f_col1, f_col2 = st.columns([1, 1])
             with f_col1:
                 st_batch_filter = st.selectbox("Filter batch", ["All Batches", "Batch 1", "Batch 2", "Batch 3", "Batch 4"], key="st_batch_filter")
             with f_col2:
