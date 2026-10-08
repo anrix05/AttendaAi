@@ -198,6 +198,22 @@ def api_delete(endpoint: str) -> bool:
         st.error(f"Delete error: {exc}")
         return False
 
+def get_subject_excel_bytes(subject_id: str) -> Optional[bytes]:
+    """Retrieve master excel bytes directly from storage or internal backend."""
+    p = Path(f"data/subjects/{subject_id}/master_attendance.xlsx")
+    if p.exists():
+        try:
+            return p.read_bytes()
+        except Exception:
+            pass
+    try:
+        res = requests.get(f"{API_BASE}/api/subjects/{subject_id}/download", timeout=15)
+        if res.status_code == 200:
+            return res.content
+    except Exception:
+        pass
+    return None
+
 
 # ─────────────────────────────────────────────────────────────
 # 4. VIEW: HOME (SUBJECT DASHBOARD)
@@ -373,8 +389,18 @@ def render_home_view():
                         st.session_state.review_df = None
                         st.rerun()
                 with b2:
-                    down_url = f"{API_BASE}/api/subjects/{subj_id}/download"
-                    st.link_button("Excel", down_url, use_container_width=True)
+                    excel_data = get_subject_excel_bytes(subj_id)
+                    if excel_data:
+                        st.download_button(
+                            "Excel",
+                            data=excel_data,
+                            file_name=f"{subj.get('code', 'subject')}_master_attendance.xlsx",
+                            mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+                            use_container_width=True,
+                            key=f"dl_excel_{subj_id}",
+                        )
+                    else:
+                        st.button("Excel", disabled=True, help="No sheets scanned yet", use_container_width=True, key=f"dl_excel_{subj_id}")
                 with b3:
                     with st.popover("...", help="More options"):
                         st.markdown(f"**Delete {subj.get('code')}?**")
@@ -949,8 +975,18 @@ def render_workspace_view():
                             st.rerun()
 
             with c_act2:
-                download_link = f"{API_BASE}/api/subjects/{subj_id}/download"
-                st.link_button("Download Excel", download_link, use_container_width=True)
+                excel_data = get_subject_excel_bytes(subj_id)
+                if excel_data:
+                    st.download_button(
+                        "Download Excel",
+                        data=excel_data,
+                        file_name=f"{subject.get('code', 'subject')}_{subject.get('division', '')}_master_attendance.xlsx",
+                        mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+                        use_container_width=True,
+                        key="dl_excel_commit_bar",
+                    )
+                else:
+                    st.button("Download Excel", disabled=True, use_container_width=True, key="dl_excel_commit_bar_dis")
 
 
     # ── TAB 2: REGISTER ──────────────────────────────────────
@@ -982,7 +1018,16 @@ def render_workspace_view():
                         master_df["HELD"] = helds
                         master_df["ATT %"] = pcts
                 st.dataframe(master_df, use_container_width=True)
-                st.link_button("Download Excel", f"{API_BASE}/api/subjects/{subj_id}/download", type="primary")
+                excel_data = get_subject_excel_bytes(subj_id)
+                if excel_data:
+                    st.download_button(
+                        "Download Excel",
+                        data=excel_data,
+                        file_name=f"{subject.get('code', 'subject')}_{subject.get('division', '')}_master_attendance.xlsx",
+                        mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+                        type="primary",
+                        key="dl_excel_register_tab",
+                    )
             except Exception as e:
                 st.warning(f"Could not preview spreadsheet: {e}")
         else:
