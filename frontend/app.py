@@ -222,7 +222,7 @@ def get_subject_excel_bytes(subject_id: str) -> Optional[bytes]:
 def open_create_subject_dialog():
     render_html("""
     <div style="font-size:14px; color:var(--ink-2); margin-bottom:18px;">
-        Set up a new course register. You can seed the default VIT roster or upload one.
+        Set up a new course register. You can upload a student roster or read it automatically from the first scan.
     </div>
     """)
     c1, c2 = st.columns(2)
@@ -237,7 +237,7 @@ def open_create_subject_dialog():
         )
         class_in = st.selectbox("Class", [f"Semester {i}" for i in range(1, 9)], index=4)
     with c2:
-        type_in = st.segmented_control("Session type", ["Theory", "Practical", "Tutorial"], default="Theory")
+        type_in = st.segmented_control("Session type", ["Theory", "Practical"], default="Theory")
         fac_in = st.text_input("Faculty initials", placeholder="e.g. SHP")
         div_in = st.selectbox("Division", ["B", "A", "C", "D"])
         acad_in = st.text_input("Academic year", value="2026-27 (Odd)")
@@ -245,8 +245,8 @@ def open_create_subject_dialog():
     st.markdown('<div style="margin: 16px 0 8px; font-weight: 600; font-size: 13px; color: var(--ink);">Roster setup</div>', unsafe_allow_html=True)
     roster_choice = st.segmented_control(
         "Roster option",
-        ["Seed default 30-student roster", "Upload roster file", "Read from first scan"],
-        default="Seed default 30-student roster",
+        ["Upload roster file", "Read from first scan"],
+        default="Upload roster file",
         label_visibility="collapsed",
     )
     uploaded_file = None
@@ -269,17 +269,7 @@ def open_create_subject_dialog():
                 "faculty": fac_in.strip().upper(),
                 "academic_year": acad_in.strip() or "2026-27 (Odd)",
             }
-            if roster_choice == "Seed default 30-student roster":
-                gt_path = Path(__file__).resolve().parent.parent / "backend" / "tests" / "fixtures" / "ground_truth_ss_divb.json"
-                if gt_path.exists():
-                    import json
-                    with open(gt_path, "r", encoding="utf-8") as gf:
-                        gt_d = json.load(gf)
-                    payload["roster"] = [
-                        {"sr_no": s["sr_no"], "roll_no": s["roll_no"], "name": s["name"], "batch": s["batch"]}
-                        for s in gt_d.get("students", [])
-                    ]
-            elif roster_choice == "Upload roster file" and uploaded_file:
+            if roster_choice == "Upload roster file" and uploaded_file:
                 try:
                     if uploaded_file.name.endswith(".csv"):
                         df_r = pd.read_csv(uploaded_file)
